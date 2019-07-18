@@ -23,7 +23,7 @@ class Signup extends Component {
 
 	signup = (e) => {
 		e.preventDefault()
-		axios.post(`${process.env.REACT_APP_API}/api/signup`, this.state).then((res) => {
+		axios.post(`mongodb://localhost:27017/tortuga/api/signup`, this.state).then((res) => {
 			localStorage.setItem('token', res.data.token)
 			this.props.auth()
 		}).catch((err) => {

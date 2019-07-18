@@ -1,0 +1,6 @@
+<li className={ this.state.category.active ? 'active' : '' } onClick={() => this.props.selectCategory(this.state.category._id)}># {this.state.category.name}</li>
+<span className="badge badge-dark">#food</span>
+<span className="badge badge-dark">#travel</span>
+<span className="badge badge-dark">#wellness</span>
+<span className="badge badge-dark">#services</span>
+<span className="badge badge-dark">#sports</span>

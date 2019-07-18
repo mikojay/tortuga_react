@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
-import Signup from './Signup'
+// import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
+// import Signup from './Signup'
 import App from './App'
-import Login from './Login'
+// import Login from './Login'
 
 class Routes extends Component {
 	// Data
@@ -23,15 +23,16 @@ class Routes extends Component {
 	// Render
 	render() {
 		return (
-			<BrowserRouter>
-				<Switch>
-					<Route path="/login" component={() => <Login auth={this.auth} />} />
-					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
-					<Route path="/" render={() => (
-							this.checkAuth() ? (<App />) : (<Redirect to="/login" />)
-						)} />
-				</Switch>
-			</BrowserRouter>
+		<App/>
+			// <BrowserRouter>
+			// 	<Switch>
+			// 		<Route path="/login" component={() => <Login auth={this.auth} />} />
+			// 		<Route path="/signup" component={() => <Signup auth={this.auth} />} />
+			// 		<Route path="/" render={() => (
+			// 				this.checkAuth() ? (<App />) : (<Redirect to="/login" />)
+			// 			)} />
+			// 	</Switch>
+			// </BrowserRouter>
 		)
 	}
 }

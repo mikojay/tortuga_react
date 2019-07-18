@@ -3,18 +3,34 @@ html, body {
 	padding: 0;
 	font-family: Lato, sans-serif;
 }
-
-#wrap {
-	height: 100vh;
-	display: grid;
-	grid-template-columns: 200px auto;
+#leftCol, #rightCol {
+    height: 100vh;
 }
-
-.signup {
-	margin-top: 100px;
+#rightCol {
+    background: #d2d9ff;
 }
-
-.error {
-	color: tomato;
-	margin-bottom: 10px;
-}
+	#cardWrap{
+		height: 500px;
+		overflow-y: scroll;
+		border: solid 1px black;
+		border-radius: 5px;
+	}
+	#leftcol li{
+		cursor: pointer;
+	}
+	#leftcol li :hover{
+		background: #41CAEB;
+		color: #fff;
+    }
+    .img-thumbnail{
+		width: 50px!important;
+	}
+	#logo{
+		width: 8rem;
+	}
+	#rightNav{
+		background-color: white;
+	}
+	.card{
+		width: 29rem;
+	}
