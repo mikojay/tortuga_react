@@ -18,10 +18,13 @@ html, body {
 	#leftcol li{
 		cursor: pointer;
 	}
-	#leftcol li :hover{
+	#leftcol li:hover{
 		background: #41CAEB;
+	}
+	#leftcol li.active {
+		background: #fc9923;
 		color: #fff;
-    }
+	}
     .img-thumbnail{
 		width: 50px!important;
 	}
