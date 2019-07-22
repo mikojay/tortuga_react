@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 // import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 // import Signup from './Signup'
-import App from './App'
+// import App from './App'
+import Profile from './profile'
 // import Login from './Login'
 
 class Routes extends Component {
@@ -23,7 +24,8 @@ class Routes extends Component {
 	// Render
 	render() {
 		return (
-		<App/>
+		// <App/>
+		<Profile/>
 			// <BrowserRouter>
 			// 	<Switch>
 			// 		<Route path="/login" component={() => <Login auth={this.auth} />} />

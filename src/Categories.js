@@ -4,7 +4,7 @@ import profile from './images/profile.jpg'
 import Category from './Category'
 import axios from 'axios'
 
-class LeftCol extends Component {
+class Categories extends Component {
 	// Data
 	state = {
 		categories: []
@@ -58,4 +58,4 @@ class LeftCol extends Component {
 	}
 }
 
-export default LeftCol
+export default Categories
