@@ -25,13 +25,33 @@ class Profile extends Component {
 		this.setState({password: e.target.value})
 	}
 
-	login = (e) => {
+	changeWhatsapp = (e) => {
+		this.setState({password: e.target.value})
+	}
+
+	changeLinkedin = (e) => {
+			this.setState({password: e.target.value})
+	}
+
+	changeFacebook = (e) => {
+		this.setState({password: e.target.value})
+	}
+
+	changeInstagram = (e) => {
+		this.setState({password: e.target.value})
+	}
+
+	update = (e) => {
 		e.preventDefault()
-		axios.post(`mongodb://localhost:27017/tortuga/api/profile`, this.state).then((res) => {
-			if (!res.data.token) {
+		// axios.post(`mongodb://localhost:27017/tortuga/api/profile`, this.state).then((res) => {
+		axios.post(this.state).then((res) => {
+			// if (!res.data.token) {
+			if (this.state) {
 				this.setState({
 					error: res.data
 				})
+				console.log('E',e);
+				console.log('RES DATA', res.data);
 			} else {
 				this.setState({
 					error: ''
@@ -86,26 +106,26 @@ class Profile extends Component {
 			        <div id="cardWrap" className=" p-3">
 							{/*  SOCIAL */}
 								<h2>Socials</h2>
-								<form>
+								<form onSubmit={(e) => this.update(e)}>
 								<div className="form-row p-2">
 									<div className="col">
 									  <div className="form-group">
 									    <label>
 												<i className="fab fa-linkedin"></i>
 											</label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Linkedin"/>
+									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Linkedin" value={this.state.linkedin} onChange={(e) => this.changeLinkedin(e)}/>
 									  </div>
 									  <div className="form-group">
 									    <label>
 									    	<i className="fab fa-github-square"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="GitHub"/>
+									    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="GitHub" value={this.state.github} onChange={(e) => this.changeGithub(e)}/>
 									  </div>
 										<div className="form-group">
 									    <label>
 												<i className="fab fa-facebook"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Facebook"/>
+									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Facebook" value={this.state.facebook} onChange={(e) => this.changeFacebook(e)}/>
 									  </div>
 										</div>
 										<div className="col">
@@ -119,13 +139,13 @@ class Profile extends Component {
 									    <label>
 									    	<i className="fab fa-whatsapp"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="WhatsApp"/>
+									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="WhatsApp" value={this.state.whatsap} onChange={(e) => this.changeWhatsapp(e)}/>
 									  </div>
 										<div className="form-group">
 									    <label>
 									    	<i className="fab fa-instagram"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Instagram"/>
+									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Instagram" value={this.state.instagram} onChange={(e) => this.changeInstagram(e)}/>
 									  </div>
 									</div>
 
