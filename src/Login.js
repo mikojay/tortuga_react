@@ -20,7 +20,7 @@ class Login extends Component {
 
 	login = (e) => {
 		e.preventDefault()
-		axios.post(`mongodb://localhost:27017/tortuga/api/login`, this.state).then((res) => {
+		axios.post(`http://localhost:2200/api/login`, this.state).then((res) => {
 			if (!res.data.token) {
 				this.setState({
 					error: res.data

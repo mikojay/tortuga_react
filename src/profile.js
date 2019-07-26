@@ -41,28 +41,48 @@ class Profile extends Component {
 		this.setState({password: e.target.value})
 	}
 
-	update = (e) => {
-		e.preventDefault()
-		// axios.post(`mongodb://localhost:27017/tortuga/api/profile`, this.state).then((res) => {
-		axios.post(this.state).then((res) => {
+	getUserData = () => {
+		axios.get('http://localhost:2200/api/profile', {headers: {
+				Authorization: `Bearer ${localStorage.getItem('token')}`
+			}}).then((res) => {
+			console.log('res',res);
 			// if (!res.data.token) {
 			if (this.state) {
 				this.setState({
-					error: res.data
+					email: res.data.email
 				})
-				console.log('E',e);
-				console.log('RES DATA', res.data);
+				// console.log('E',e);
+				// console.log('RES DATA', res.data);
 			} else {
-				this.setState({
-					error: ''
-				})
+				// this.setState({
+				// 	error: ''
+				// })
 				localStorage.setItem('token', res.data.token)
 				this.props.auth()
 			}
+	}
+)}
+
+
+	componentWillMount() {
+		this.getUserData()
+	}
+	// 		let profile = this.state.profile
+	// 		place.date = moment(place.date).format('D MMM YYYY - h:mma')
+	// 		this.setState({place})
+	// 		console.log('DATA>>>>',this.state.place);
+	//
+
+
+	update = (e) => {
+		e.preventDefault()
+		axios.patch(`https://localhost:27017/tortuga/api/profile`, this.state).then((res) => {
+			this.getUserData()
 		}).catch((err) => {
 			console.log('err', err)
 		})
 	}
+
 
 	// Render
 	render() {
