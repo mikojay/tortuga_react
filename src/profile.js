@@ -8,6 +8,7 @@ class Profile extends Component {
 	// Data
 	state = {
 		email: '',
+		password: '',
 		github: '',
 		whatsapp: '',
 		linkedin: '',
@@ -21,24 +22,28 @@ class Profile extends Component {
 		this.setState({email: e.target.value})
 	}
 
-	changeGithub = (e) => {
+	changePassword = (e) => {
 		this.setState({password: e.target.value})
+	}
+
+	changeGithub = (e) => {
+		this.setState({github: e.target.value})
 	}
 
 	changeWhatsapp = (e) => {
-		this.setState({password: e.target.value})
+		this.setState({whatsapp: e.target.value})
 	}
 
 	changeLinkedin = (e) => {
-			this.setState({password: e.target.value})
+			this.setState({linkedin: e.target.value})
 	}
 
 	changeFacebook = (e) => {
-		this.setState({password: e.target.value})
+		this.setState({facebook: e.target.value})
 	}
 
 	changeInstagram = (e) => {
-		this.setState({password: e.target.value})
+		this.setState({instagram: e.target.value})
 	}
 
 	getUserData = () => {
@@ -49,7 +54,13 @@ class Profile extends Component {
 			// if (!res.data.token) {
 			if (this.state) {
 				this.setState({
-					email: res.data.email
+					email: res.data.email,
+					github: res.data.github,
+					facebook: res.data.facebook,
+					whatsapp: res.data.whatsapp,
+					linkedin: res.data.linkedin,
+					password: res.data.password,
+					instagram: res.data.instagram
 				})
 				// console.log('E',e);
 				// console.log('RES DATA', res.data);
@@ -126,43 +137,49 @@ class Profile extends Component {
 								<form onSubmit={(e) => this.update(e)}>
 								<div className="form-row p-2">
 									<div className="col">
-									  <div className="form-group">
-									    <label>
-												<i className="fab fa-linkedin"></i>
-											</label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Linkedin" value={this.state.linkedin} onChange={(e) => this.changeLinkedin(e)}/>
-									  </div>
-									  <div className="form-group">
-									    <label>
-									    	<i className="fab fa-github-square"></i>
-									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="GitHub" value={this.state.github} onChange={(e) => this.changeGithub(e)}/>
-									  </div>
-										<div className="form-group">
-									    <label>
-												<i className="fab fa-facebook"></i>
-									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Facebook" value={this.state.facebook} onChange={(e) => this.changeFacebook(e)}/>
-									  </div>
-										</div>
-										<div className="col">
 										<div className="form-group">
 									    <label>
 									    	<i className="fas fa-at"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Email" value={this.state.email} onChange={(e) => this.changeEmail(e)}/>
+									    <input type="text" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.changeEmail(e)}/>
 									  </div>
+										<div className="form-group">
+									    <label>
+									    	<i className="fas fa-key"></i>
+									    </label>
+									    <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.changePassword(e)}/>
+									  </div>
+									  <div className="form-group">
+									    <label>
+												<i className="fab fa-linkedin"></i>
+											</label>
+									    <input type="text" className="form-control" placeholder="Linkedin" value={this.state.linkedin} onChange={(e) => this.changeLinkedin(e)}/>
+									  </div>
+										</div>
+										<div className="col">
+											<div className="form-group">
+										    <label>
+										    	<i className="fab fa-github-square"></i>
+										    </label>
+										    <input type="text" className="form-control" placeholder="GitHub" value={this.state.github} onChange={(e) => this.changeGithub(e)}/>
+										  </div>
+											<div className="form-group">
+										    <label>
+													<i className="fab fa-facebook"></i>
+										    </label>
+										    <input type="text" className="form-control" placeholder="Facebook" value={this.state.facebook} onChange={(e) => this.changeFacebook(e)}/>
+										  </div>
 										<div className="form-group">
 									    <label>
 									    	<i className="fab fa-whatsapp"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="WhatsApp" value={this.state.whatsap} onChange={(e) => this.changeWhatsapp(e)}/>
+									    <input type="text" className="form-control" placeholder="WhatsApp" value={this.state.whatsapp} onChange={(e) => this.changeWhatsapp(e)}/>
 									  </div>
 										<div className="form-group">
 									    <label>
 									    	<i className="fab fa-instagram"></i>
 									    </label>
-									    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Instagram" value={this.state.instagram} onChange={(e) => this.changeInstagram(e)}/>
+									    <input type="text" className="form-control" placeholder="Instagram" value={this.state.instagram} onChange={(e) => this.changeInstagram(e)}/>
 									  </div>
 									</div>
 
