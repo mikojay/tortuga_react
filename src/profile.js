@@ -57,8 +57,7 @@ class Profile extends Component {
 				// this.setState({
 				// 	error: ''
 				// })
-				localStorage.setItem('token', res.data.token)
-				this.props.auth()
+
 			}
 	}
 )}
@@ -67,17 +66,15 @@ class Profile extends Component {
 	componentWillMount() {
 		this.getUserData()
 	}
-	// 		let profile = this.state.profile
-	// 		place.date = moment(place.date).format('D MMM YYYY - h:mma')
-	// 		this.setState({place})
-	// 		console.log('DATA>>>>',this.state.place);
-	//
 
 
 	update = (e) => {
 		e.preventDefault()
-		axios.patch(`https://localhost:27017/tortuga/api/profile`, this.state).then((res) => {
-			this.getUserData()
+		axios.patch(`http://localhost:2200/api/profile`, this.state, {headers: {
+				Authorization: `Bearer ${localStorage.getItem('token')}`
+			}}).then((res) => {
+				localStorage.setItem('token', res.data.token)
+				this.getUserData()
 		}).catch((err) => {
 			console.log('err', err)
 		})
