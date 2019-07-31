@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 import Signup from './Signup'
-// import App from './App'
+import Create from './Create'
+import App from './App'
 import Profile from './profile'
 import Login from './Login'
 
@@ -30,8 +31,10 @@ class Routes extends Component {
 				<Switch>
 					<Route path="/login" component={() => <Login auth={this.auth} />} />
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
+					<Route path='/create' component={() => <Create auth={this.auth} />} />
+					<Route path='/profile' component={() => <Profile auth={this.auth} />} />
 					<Route path="/" render={() => (
-							this.checkAuth() ? (<Profile />) : (<Redirect to="/login" />)
+							this.checkAuth() ? (<App />) : (<Redirect to="/login" />)
 						)} />
 				</Switch>
 			</BrowserRouter>

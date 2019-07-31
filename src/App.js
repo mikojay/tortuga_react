@@ -7,12 +7,12 @@ import Places from './Places'
 class App extends Component {
 	// Data
 	state = {
-		channel: ''
+		category: ''
 	}
 	// Functions
-	getMessages = (id) => {
+	getPlaces = (id, sort) => {
 		this.setState({
-			channel: id
+			category: id
 		})
 	}
 	// Render
@@ -23,7 +23,7 @@ class App extends Component {
 			          <div className="row">
 			            {/* LEFT COLUMN */}
 			          <div id="leftCol" className="col-3 p-0 ">
-			            <Categories />
+			            <Categories getPlaces={this.getPlaces}/>
 			             </div>
 			              {/* RIGHT COLUMN */}
 			             <div id="rightCol" className="col-9 p-0 ">

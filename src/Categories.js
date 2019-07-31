@@ -30,7 +30,8 @@ class Categories extends Component {
 	let category = categories.find((c) => c._id === id)
 	category.active = true
 	this.setState({categories})
-	// this.props.getPlaces(id)
+	this.props.getPlaces(id)
+	console.log('ID PLACE', this.props.getPlaces(id));
 }
 	// Render
 	render() {
@@ -45,12 +46,14 @@ class Categories extends Component {
 			 </nav>
 			 <div className="wrap p-2">
 				 <div className="card-footer bg-transparent border-dark">
+					 <div id="category">
 					 <h5 className="lead small text-uppercase font-weight-bold">Categories</h5>
 					 {
 						this.state.categories.map((c) => {
 							return <Category category={c} key={c._id} selectCategory={this.selectCategory} />
 						})
 					}
+				</div>
 				 </div>
 			 </div>
 		 </div>

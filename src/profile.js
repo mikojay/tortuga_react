@@ -137,19 +137,19 @@ class Profile extends Component {
 								<form onSubmit={(e) => this.update(e)}>
 								<div className="form-row p-2">
 									<div className="col">
-										<div className="form-group">
+										<div className="form-group icon">
 									    <label>
 									    	<i className="fas fa-at"></i>
 									    </label>
 									    <input type="text" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.changeEmail(e)}/>
 									  </div>
-										<div className="form-group">
+										<div className="form-group icon">
 									    <label>
 									    	<i className="fas fa-key"></i>
 									    </label>
 									    <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.changePassword(e)}/>
 									  </div>
-									  <div className="form-group">
+									  <div className="form-group icon">
 									    <label>
 												<i className="fab fa-linkedin"></i>
 											</label>
@@ -157,25 +157,25 @@ class Profile extends Component {
 									  </div>
 										</div>
 										<div className="col">
-											<div className="form-group">
+											<div className="form-group icon">
 										    <label>
 										    	<i className="fab fa-github-square"></i>
 										    </label>
 										    <input type="text" className="form-control" placeholder="GitHub" value={this.state.github} onChange={(e) => this.changeGithub(e)}/>
 										  </div>
-											<div className="form-group">
+											<div className="form-group icon">
 										    <label>
 													<i className="fab fa-facebook"></i>
 										    </label>
 										    <input type="text" className="form-control" placeholder="Facebook" value={this.state.facebook} onChange={(e) => this.changeFacebook(e)}/>
 										  </div>
-										<div className="form-group">
+										<div className="form-group icon">
 									    <label>
 									    	<i className="fab fa-whatsapp"></i>
 									    </label>
 									    <input type="text" className="form-control" placeholder="WhatsApp" value={this.state.whatsapp} onChange={(e) => this.changeWhatsapp(e)}/>
 									  </div>
-										<div className="form-group">
+										<div className="form-group icon">
 									    <label>
 									    	<i className="fab fa-instagram"></i>
 									    </label>

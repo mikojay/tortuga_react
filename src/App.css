@@ -15,16 +15,23 @@ html, body {
 		border: solid 1px black;
 		border-radius: 5px;
 	}
-	#leftcol li{
+	#category li{
 		cursor: pointer;
 	}
-	#leftcol li:hover{
+	#category li:hover{
 		background: #41CAEB;
 	}
-	#leftcol li.active {
+	#category li.active {
 		background: #fc9923;
 		color: #fff;
 	}
+	#category li {
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+
     .img-thumbnail{
 		width: 50px!important;
 	}
