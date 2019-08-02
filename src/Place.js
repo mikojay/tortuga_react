@@ -17,12 +17,12 @@ export default class Place extends Component {
   render() {
     return (
       <div>
-      <div className="card mt-3 mb-3" >
+      <div className="card m-2" >
               <div className="card-body">
                 <div className="wrapper">
                   <div className="row">
                     <div className="col-3 p-0">
-                      <div className="imageWrapper "> <img src={food} alt="..." className="img-thumbnail"></img> </div>
+                      <div className="imageWrapper "> <img src={food} alt="..." className="img-food mt-1 ml-2"></img> </div>
                     </div>
                     <div className="col-9 d-flex flex-column"> <span><b>{this.state.place.name} </b></span>
                      <span><b><i className="far fa-address-book"></i> </b>{this.state.place.address} </span>
@@ -30,7 +30,7 @@ export default class Place extends Component {
                         <span><b><i className="far fa-thumbs-up"></i> </b>{this.state.place.likes} </span>
                         <span><b> <i className="far fa-thumbs-down"></i> </b>{this.state.place.dislikes} </span>
                       </div>
-                      <p className="m-0"><b><i className="far fa-sticky-note"></i> </b> {this.state.place.description} </p>
+                      <p className="m-0"><b><i class="far fa-comment-dots"></i> </b> {this.state.place.description} </p>
                       <p className="m-0"><b><i className="fas fa-at"></i> </b> {this.state.place.author.name} </p>
                       <p className="m-0"><b><i className="far fa-calendar-alt"></i> </b> {this.state.place.date} </p>
                       <span className="badge badge-dark"># {this.state.place.category.name} </span>

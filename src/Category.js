@@ -20,7 +20,7 @@ class Category extends Component {
 	// Render
 	render() {
 		return (
-			<li className={ this.state.category.active ? 'active' : '' } onClick={() => this.props.selectCategory(this.state.category._id)}>{this.state.category.name}</li>
+			<p className={ this.state.category.active ? 'active' : '' } onClick={() => this.props.selectCategory(this.state.category._id)}>{this.state.category.name}</p>
 		)
 	}
 }

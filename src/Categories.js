@@ -36,24 +36,26 @@ class Categories extends Component {
 	render() {
 		return (
 			<div>
-			 <nav className="navbar navbar-light bg-light w-100 d-flex flex-column alig">
-				 <div className="imageWrapper ">
-					 <img src={profile} alt="..." className="img-thumbnail">
-					 </img>
-				 </div>
-				 <h4 className="small ">Michael Bronk</h4>
-			 </nav>
+				<div id="usrImageDisplay" class="row">
+ 						<div class="imageWrapper col ml-4">
+ 							<img src={profile} alt="..." class="img-lilprofile rounded-circle"/>
+ 						</div>
+ 						<div class="username col mr-4">
+ 							<p>Michael</p>
+ 							<p>Brooks</p>
+ 							<p>batch: 99</p>
+ 						</div>
+         </div>
 			 <div className="wrap p-2">
-				 <div className="card-footer bg-transparent border-dark">
+
 					 <div id="category">
-					 <h5 className="lead small text-uppercase font-weight-bold">Categories</h5>
 					 {
 						this.state.categories.map((c) => {
 							return <Category category={c} key={c._id} selectCategory={this.selectCategory} />
 						})
 					}
 				</div>
-				 </div>
+
 			 </div>
 		 </div>
 		)

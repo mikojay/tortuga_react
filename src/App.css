@@ -9,38 +9,68 @@ html, body {
 #rightCol {
     background: #d2d9ff;
 }
+.toprow{
+	text-align: right;
+}
+.filterbutton {
+	-webkit-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+-moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+background-color: #6400ed;
+color: rgb(237, 237, 237);
+padding-left: 15px;
+padding-right: 15px;
+border-color: #6400ed;
+}
 	#cardWrap{
 		height: 500px;
 		overflow-y: scroll;
-		border: solid 1px black;
-		border-radius: 5px;
+		display: inline-grid;
+		grid-template-columns: 1fr 1fr;
+		/* border: solid 1px black;
+		border-radius: 5px; */
 	}
-	#category li{
-		cursor: pointer;
+
+	#category p:hover{
+		background: #12cfdc;
 	}
-	#category li:hover{
-		background: #41CAEB;
-	}
-	#category li.active {
-		background: #fc9923;
+	#category p.active {
+		background: #6400ed;
 		color: #fff;
 	}
-	#category li {
+	#category p {
 	padding: 5px 10px;
 	cursor: pointer;
 	border-radius: 4px;
 }
+	#category {
+		margin-top: 100px;
+	}
 
-
-    .img-thumbnail{
+.username p {
+	font-size: 18px;
+	color: #333333;
+	text-align: right;
+}
+.img-lilprofile{
+	width: 55px;
+}
+	/* .img-thumbnail{
 		width: 50px!important;
+	} */
+	.img-food{
+		width: 100px!important;
 	}
 	#logo{
 		width: 8rem;
 	}
-	#rightNav{
-		background-color: white;
+	.img-logo {
+			width: 110px;
+			margin-top: 90px;
+			margin-left: 20px;
 	}
+
 	.card{
 		width: 29rem;
+		background: rgb(237, 237, 237);
 	}

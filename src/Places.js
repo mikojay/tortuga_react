@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import logo from './images/logo.png';
+
 import Place from './Place'
 // import axios from 'axios'
 import DropDownBar from './DropDownBar';
@@ -49,13 +49,12 @@ this.props.getPlaces(null, e.target.value)
     return (
 
       <div >
-        <nav id='rightNav' className="navbar w-100 border-bottom ">
-          <img id='logo' src={logo} alt="Toptuga logo"></img>
+
+
           <DropDownBar handleChange={this.handleChange} />
-          <input className="form-control w-25" placeholder="Search" type="text" />
-        </nav>
-        <div id="dataDisplay" className="container-fluid mt-3">
-          <div id="cardWrap" className=" p-3">
+
+
+          <div id="cardWrap" className=" pl-4 mt-3">
            {/* PLACE */}
            {
               this.state.places.map((p)=>{
@@ -66,7 +65,7 @@ this.props.getPlaces(null, e.target.value)
 
           </div>
 
-        </div>
+
       </div>
 
 
