@@ -2,51 +2,45 @@ import React, { Component } from 'react'
 import './App.css'
 import logo from './images/logo.png';
 import Place from './Place'
-import axios from 'axios'
+// import axios from 'axios'
 import DropDownBar from './DropDownBar';
 export default class Places extends Component {
   //data
   state = {
     places:[],
-    choice:'Top five '
+    sort:'Top five '
   }
   //Functions
+	componentWillReceiveProps(props){
+		console.log('props', props);
+		this.setState({places: props.places})
+	}
+
   componentWillMount(){
-    axios.get('http://localhost:2200/api/places').then((res)=>{
-      //console.log(res)
-      this.setState({
-        places:res.data
-      })
-    }).catch((err)=>{
-      console.log('Error Axios Get ',err)
-    })
+		this.props.getPlaces()
+		// this.props.getPlaces()
+    // axios.get('http://localhost:2200/api/places').then((res)=>{
+    //   //console.log(res)
+    //   this.setState({
+    //     places:res.data
+    //   })
+    // }).catch((err)=>{
+    //   console.log('Error Axios Get ',err)
+    // })
   }
 //   handleChange = (e)=>{
 //     this.setState({
-//         choice:e.target.value
+//         sort:e.target.value
 //     })
 //     console.log(e.target.value)
 // }
 // ========
 handleChange = (e)=>{
   this.setState({
-    choice:e.target.value
+    sort:e.target.value
 })
-  let url = 'http://localhost:2200/api/places'
-  if(e){
-    url+= `?sort=${e.target.value}`
-    console.log(e.target.value)
-    console.log(url)
-  }
+this.props.getPlaces(null, e.target.value)
 
-  axios.get(url).then((res)=>{
-    //console.log(res)
-    this.setState({
-      places:res.data
-    })
-  }).catch((err)=>{
-    console.log('Error Axios Get ',err)
-  })
 }
 
 
