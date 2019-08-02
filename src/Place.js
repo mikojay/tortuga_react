@@ -30,7 +30,7 @@ export default class Place extends Component {
                         <span><b><i className="far fa-thumbs-up"></i> </b>{this.state.place.likes} </span>
                         <span><b> <i className="far fa-thumbs-down"></i> </b>{this.state.place.dislikes} </span>
                       </div>
-                      <p className="m-0"><b><i class="far fa-comment-dots"></i> </b> {this.state.place.description} </p>
+                      <p className="m-0"><b><i className="far fa-comment-dots"></i> </b> {this.state.place.description} </p>
                       <p className="m-0"><b><i className="fas fa-at"></i> </b> {this.state.place.author.name} </p>
                       <p className="m-0"><b><i className="far fa-calendar-alt"></i> </b> {this.state.place.date} </p>
                       <span className="badge badge-dark"># {this.state.place.category.name} </span>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Create.css'
+import './css/Create.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios';
 import logo from './images/logo.png'

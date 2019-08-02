@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Logout from './Logout'
 export default class Bar extends Component {
 
     //function
@@ -16,6 +16,7 @@ export default class Bar extends Component {
       <option value='-dislikes' >Dislikes</option>
 			<option value='Top Five' >Top Five</option>
     </select>
+		<Logout/>
   </div>
 		  </form>
       </div>

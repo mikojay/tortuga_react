@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './profile.css'
+import './css/profile.css'
 import profile from './images/profile.jpg';
 import logo from './images/logo1.png';
 class Profile extends Component {

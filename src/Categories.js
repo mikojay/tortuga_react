@@ -7,7 +7,8 @@ import axios from 'axios'
 class Categories extends Component {
 	// Data
 	state = {
-		categories: []
+		categories: [],
+		user: []
 	}
 
 	//Lifecycle
@@ -18,10 +19,11 @@ class Categories extends Component {
 				categories: res.data
 			})
 			this.selectCategory(res.data[0]._id)
-			console.log('res.data[0]', res.data[0])
+			// console.log('res.data[0]', res.data[0])
 		}).catch((err) => {
 			console.log('err', err)
 		})
+		this.getUserData()
 	}
 	//Functions
 	selectCategory = (id) => {
@@ -32,18 +34,34 @@ class Categories extends Component {
 	this.setState({categories})
 	this.props.getPlaces(id)
 }
+
+getUserData = () => {
+	axios.get('http://localhost:2200/api/profile', {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then((res) => {
+            console.log('RES_DATA', res.data)
+            this.setState({
+                user: res.data,
+                // value: res.data[2].name
+            })
+            console.log(this.state)
+        }).catch((err) => {
+            console.log('Error', err)
+        })
+}
 	// Render
 	render() {
 		return (
 			<div>
-				<div id="usrImageDisplay" class="row">
- 						<div class="imageWrapper col ml-4">
- 							<img src={profile} alt="..." class="img-lilprofile rounded-circle"/>
+				<div id="usrImageDisplay" className="row">
+ 						<div className="imageWrapper col ml-4">
+ 							<img src={profile} alt="..." className="img-lilprofile rounded-circle"/>
  						</div>
- 						<div class="usernameapp col mr-4">
- 							<p>Michael</p>
- 							<p>Brooks</p>
- 							<p>batch: 99</p>
+ 						<div className="usernameapp col mr-4">
+ 							<p>{this.state.user.name}</p>
+ 							<p>{this.state.user.batch}</p>
  						</div>
          </div>
 			 <div className="wrap p-2">

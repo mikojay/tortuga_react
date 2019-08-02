@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
+import './css/App.css'
 import axios from 'axios'
 import logo from './images/logo.png';
 import Categories from './Categories'
