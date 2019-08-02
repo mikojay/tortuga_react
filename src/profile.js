@@ -3,7 +3,7 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './profile.css'
 import profile from './images/profile.jpg';
-
+import logo from './images/logo1.png';
 class Profile extends Component {
 	// Data
 	state = {
@@ -96,97 +96,100 @@ class Profile extends Component {
 	render() {
 		return (
 			<div className="container-fluid">
-			  <div className="row">
-			    <div id="leftCol" className="col-3 p-0">
-           {/* CATEGORIES */}
+  <div className="row">
+    <div id="leftCol" className="col-3 p-0">
+			{/*  Start left col END */}
 
-					 {/*  ProfilPic */}
-			      <div className="wrap p-2">
-			        <div id="usrImageDisplay" className="row">
-			          <div className="col">
-									<div className="imageWrapper "> <img src={profile} alt="..." className="img-thumbnail"/> </div>
-			          </div>
-								<div className="col p-4">
-									<button className="btn btn-primary btn-block" type="submit">Change profile picture</button>
-								</div>
-			        </div>
+      <div className="wrapProfile p-2">
+        <div id="usrImageDisplay" className="row">
+          <div className="box col">
+						<div className="logoWrapper">
+							<img src={logo} alt="..." className="img-logo"/>
+						</div>
+						<div className="imageWrapper">
+							<img src={profile} alt="..." className="img-profile rounded-circle"/>
+						</div>
+						<button id="profilepicbutton" className="button btn btn rounded-pill mt-5" type="submit">Edit profile picture</button>
+					</div>
+				</div>
 							{/*  ProfilPic END */}
 
-
-							{/*  Category */}
-			        <div className="card-footer border-dark">
-			          <h5 className="lead small text-uppercase font-weight-bold">Categories</h5>
-			          <span className="badge badge-dark">#food</span> <span className="badge badge-dark">#travel</span> <span className="badge badge-dark">#wellness</span> <span className="badge badge-dark">#services</span>
-						 <span className="badge badge-dark">#sports</span>
-						 <div className="col p-3">
-						 </div>
-					  </div>
 			      </div>
 			    </div>
-					{/*  END CATEGORIES */}
+
 
 					{/*  START SOCIALS */}
 			    <div id="rightCol" className="col-9 p-0 ">
-			      <nav className="navbar navbar-light w-100 border-bottom"> <span className="navbar-brand mb-0 h1 lead font-weight-bold mt-4">Michael Bronk,<br/>Batch 99</span>
-			      </nav>
+
 						{/*  SOCIALS Component */}
-			      <div id="dataDisplay" className="container-fluid mt-3">
-			        <div id="cardWrap" className=" p-3">
+			      <div id="userinformation" className="mt-4 p-4">
+							<div className="username p-2 m-2">
+							<p>first name:</p>
+							<p>last name:</p>
+							<p>batch:</p>
+						</div>
 							{/*  SOCIAL */}
-								<h2>Socials</h2>
 								<form onSubmit={(e) => this.update(e)}>
-								<div className="form-row p-2">
-									<div className="col">
-										<div className="form-group icon">
-									    <label>
-									    	<i className="fas fa-at"></i>
-									    </label>
-									    <input type="text" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.changeEmail(e)}/>
-									  </div>
-										<div className="form-group icon">
-									    <label>
-									    	<i className="fas fa-key"></i>
-									    </label>
-									    <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.changePassword(e)}/>
-									  </div>
-									  <div className="form-group icon">
-									    <label>
-												<i className="fab fa-linkedin"></i>
-											</label>
-									    <input type="text" className="form-control" placeholder="Linkedin" value={this.state.linkedin} onChange={(e) => this.changeLinkedin(e)}/>
-									  </div>
-										</div>
-										<div className="col">
-											<div className="form-group icon">
-										    <label>
-										    	<i className="fab fa-github-square"></i>
-										    </label>
-										    <input type="text" className="form-control" placeholder="GitHub" value={this.state.github} onChange={(e) => this.changeGithub(e)}/>
-										  </div>
-											<div className="form-group icon">
-										    <label>
-													<i className="fab fa-facebook"></i>
-										    </label>
-										    <input type="text" className="form-control" placeholder="Facebook" value={this.state.facebook} onChange={(e) => this.changeFacebook(e)}/>
-										  </div>
-										<div className="form-group icon">
-									    <label>
-									    	<i className="fab fa-whatsapp"></i>
-									    </label>
-									    <input type="text" className="form-control" placeholder="WhatsApp" value={this.state.whatsapp} onChange={(e) => this.changeWhatsapp(e)}/>
-									  </div>
-										<div className="form-group icon">
-									    <label>
-									    	<i className="fab fa-instagram"></i>
-									    </label>
-									    <input type="text" className="form-control" placeholder="Instagram" value={this.state.instagram} onChange={(e) => this.changeInstagram(e)}/>
-									  </div>
+									<div className="title">
+										<h2>Edit info</h2>
 									</div>
 
-								<button className="btn btn-primary btn-block m-3" type="submit">Edit Socials</button>
-							</div> {/*  Socials END */}
+									<div className="row p-2">
+										<div className="form-group icon col-md-6">
+											<label>
+												<i className="fas fa-at"></i>
+											</label>
+											<input type="text" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.changeEmail(e)}/>
+										</div>
+										<div className="form-group icon col-md-6">
+											<label>
+												<i className="fas fa-key"></i>
+											</label>
+											<input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.changePassword(e)}/>
+										</div>
+									</div>
+
+								<div className="row p-2">
+									<div className="col">
+										<div className="form-group icon">
+											<label>
+												<i className="fab fa-linkedin"></i>
+											</label>
+											<input type="text" className="form-control" placeholder="Linkedin" value={this.state.linkedin} onChange={(e) => this.changeLinkedin(e)}/>
+										</div>
+										<div className="form-group icon">
+											<label>
+												<i className="fab fa-github-square"></i>
+											</label>
+											<input type="text" className="form-control" placeholder="GitHub" value={this.state.github} onChange={(e) => this.changeGithub(e)}/>
+										</div>
+										<div className="form-group icon">
+											<label>
+												<i className="fab fa-facebook"></i>
+												<input type="text" className="form-control" placeholder="Facebook" value={this.state.facebook} onChange={(e) => this.changeFacebook(e)}/>
+											</label>
+										</div>
+									</div>
+
+									<div className="col">
+										<div className="form-group icon">
+											<label>
+												<i className="fab fa-whatsapp"></i>
+											</label>
+											<input type="text" className="form-control" placeholder="WhatsApp" value={this.state.whatsapp} onChange={(e) => this.changeWhatsapp(e)}/>
+										</div>
+										<div className="form-group icon">
+											<label>
+												<i className="fab fa-instagram"></i>
+											</label>
+											<input type="text" className="form-control" placeholder="Instagram" value={this.state.instagram} onChange={(e) => this.changeInstagram(e)}/>
+											<button id="socialbutton" className="button btn btn rounded-pill" type="submit">Edit Socials</button>
+										</div>
+									</div>
+							 {/*  Socials END */}
+							 </div>
 							</form>
-					  	</div>
+
 				    </div>
 				  </div>
 				</div>

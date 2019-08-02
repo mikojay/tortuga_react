@@ -7,29 +7,50 @@ html, body {
     height: 100vh;
 }
 
-#rightCol {
-    background: #dae0ff;
+	#rightCol {
+	background: #12cfdc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #12cfdc, #6400ed, #333333); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #12cfdc, #6400ed, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+	#leftCol{
+		background: rgb(237, 237, 237);
+	}
+	#usrImageDisplay {
+		margin-top: 20px;
+	}
+	.box{
+	text-align: center;
+	}
+	.img-logo {
+		width: 180px;
+	}
+	.img-profile {
+		width: 210px;
 
-	#cardWrap{
-		height: 500px;
-		overflow-y: scroll;
-		border: solid 1px black;
-		border-radius: 5px;
 	}
 
-	.badge{
-		cursor: pointer;
+	.icon {
+		font-size: 17px;
 	}
 
-	.badge:hover{
-		background-color: #41CAEB!important;
+	#profilepicbutton {
+		background-color: #6400ed;
+		color: rgb(237, 237, 237);
+	}
+	#socialbutton {
+		margin-left: 300px;
+		margin-top: 80px;
+		color: #6400ed;
+		background-color: rgb(237, 237, 237);
 	}
 
-.imageWrapper {
-	width: 300px;
-}
+	.button {
+		-webkit-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+-moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+	}
 
-.icon {
-	font-size: 18px;
-}
+	#userinformation {
+		font-size: 18px;
+		color: rgb(237, 237, 237);
+	}

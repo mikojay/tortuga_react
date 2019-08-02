@@ -31,7 +31,6 @@ class Categories extends Component {
 	category.active = true
 	this.setState({categories})
 	this.props.getPlaces(id)
-	console.log('ID PLACE', this.props.getPlaces(id));
 }
 	// Render
 	render() {
