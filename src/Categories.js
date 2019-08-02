@@ -40,7 +40,7 @@ class Categories extends Component {
  						<div class="imageWrapper col ml-4">
  							<img src={profile} alt="..." class="img-lilprofile rounded-circle"/>
  						</div>
- 						<div class="username col mr-4">
+ 						<div class="usernameapp col mr-4">
  							<p>Michael</p>
  							<p>Brooks</p>
  							<p>batch: 99</p>

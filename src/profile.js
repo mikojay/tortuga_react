@@ -122,19 +122,19 @@ class Profile extends Component {
 			    <div id="rightCol" className="col-9 p-0 ">
 
 						{/*  SOCIALS Component */}
-			      <div id="userinformation" className="mt-4 p-4">
-							<div className="username p-2 m-2">
-							<p>first name:</p>
-							<p>last name:</p>
-							<p>batch:</p>
-						</div>
+			      <div id="userinformation" className="p-4">
+							<div className="username p-2 mt-2">
+								<p>first name:</p>
+								<p>last name:</p>
+								<p>batch:</p>
+							</div>
 							{/*  SOCIAL */}
 								<form onSubmit={(e) => this.update(e)}>
-									<div className="title">
+									<div className="title mt-5">
 										<h2>Edit info</h2>
 									</div>
 
-									<div className="row p-2">
+									<div className="row p-2 mt-3">
 										<div className="form-group icon col-md-6">
 											<label>
 												<i className="fas fa-at"></i>
