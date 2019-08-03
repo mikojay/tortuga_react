@@ -14,7 +14,7 @@ class Categories extends Component {
 
 	//Lifecycle
 	componentDidMount() {
-		axios.get('http://localhost:2200/api/categories').then((res) => {
+		axios.get(`${process.env.REACT_APP_API}/api/categories`).then((res) => {
 			res.data[0].active = true
 			this.setState({
 				categories: res.data
@@ -37,7 +37,7 @@ class Categories extends Component {
 }
 
 getUserData = () => {
-	axios.get('http://localhost:2200/api/profile', {
+	axios.get(`${process.env.REACT_APP_API}/api/profile`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }

@@ -23,7 +23,7 @@ class Login extends Component {
 
   login = (e) => {
     e.preventDefault()
-    axios.post(`http://localhost:2200/api/login`, this.state).then((res) => {
+    axios.post(`${process.env.REACT_APP_API}/api/login`, this.state).then((res) => {
       if (!res.data.token) {
         this.setState({
           error: res.data

@@ -23,7 +23,7 @@ export default class Create extends Component {
     }
     //axios
     componentDidMount() {
-        axios.get('http://localhost:2200/api/categories').then((res) => {
+        axios.get(`${process.env.REACT_APP_API}/api/categories`).then((res) => {
             console.log('RES_DATA', res.data)
             this.setState({
                 categories: res.data,
@@ -35,7 +35,7 @@ export default class Create extends Component {
         })
     }
     componentWillMount() {
-        axios.get('http://localhost:2200/api/places').then((res) => {
+        axios.get(`${process.env.REACT_APP_API}/api/places`).then((res) => {
             this.setState({
                 places: res.data
             })
@@ -67,7 +67,7 @@ export default class Create extends Component {
         //     category: this.state.category,
         //     file:this.state.file
         // }
-        axios.post('http://localhost:2200/api/places', file_holder,
+        axios.post(`${process.env.REACT_APP_API}api/places`, file_holder,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`

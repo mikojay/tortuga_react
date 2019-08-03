@@ -34,7 +34,7 @@ export default class Signup extends Component {
 		form_holder.append('batch', this.state.batch)
     form_holder.append('password', this.state.password)
 
-    axios.post(`http://localhost:2200/api/signup`, form_holder).then((res) => {
+    axios.post(`${process.env.REACT_APP_API}/api/signup`, form_holder).then((res) => {
       console.log('res', res)
       localStorage.setItem('token', res.data)
       this.props.auth()

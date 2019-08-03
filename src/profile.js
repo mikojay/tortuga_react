@@ -51,7 +51,7 @@ class Profile extends Component {
 	}
 
 	getUserData = () => {
-		axios.get('http://localhost:2200/api/profile', {headers: {
+		axios.get(`${process.env.REACT_APP_API}/api/profile`, {headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}}).then((res) => {
 			console.log('res',res);
@@ -77,7 +77,7 @@ class Profile extends Component {
 	}
 )}
 getUser = () => {
-	axios.get('http://localhost:2200/api/profile', {
+	axios.get(`${process.env.REACT_APP_API}/api/profile`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -101,7 +101,7 @@ getUser = () => {
 
 	update = (e) => {
 		e.preventDefault()
-		axios.patch(`http://localhost:2200/api/profile`, this.state, {headers: {
+		axios.patch(`${process.env.REACT_APP_API}/api/profile`, this.state, {headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}}).then((res) => {
 				localStorage.setItem('token', res.data.token)

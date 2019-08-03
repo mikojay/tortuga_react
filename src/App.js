@@ -20,7 +20,7 @@ class App extends Component {
 
 		if (id) {
 			console.log('places id', id);
-			axios.get(`http://localhost:2200/api/places?category=${id}`).then((res)=>{
+			axios.get(`${process.env.REACT_APP_API}/api/places?category=${id}`).then((res)=>{
 	      //console.log(res)
 	      this.setState({
 	        places:res.data
@@ -29,7 +29,7 @@ class App extends Component {
 		} else if (sort) {
 			console.log('sort', sort);
 			// handleChange(e)
-			axios.get(`http://localhost:2200/api/places?sort=${sort}`).then((res)=>{
+			axios.get(`${process.env.REACT_APP_API}/api/places?sort=${sort}`).then((res)=>{
 				console.log('responds', res);
 	      //console.log(res)
 	      this.setState({
@@ -37,12 +37,7 @@ class App extends Component {
 	      })
 			})
 		} else {
-			// axios.get('http://localhost:2200/api/places').then((res)=>{
-			// 	//console.log(res)
-			// 	this.setState({
-			// 		places:res.data
-			// 	})
-			// })
+		
 	}
 }
     // }).catch((err)=>{
