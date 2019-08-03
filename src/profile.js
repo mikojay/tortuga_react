@@ -2,11 +2,13 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/profile.css'
-import profile from './images/profile.jpg';
+import Logout from './Logout'
+// import profile from './images/profile.jpg';
 import logo from './images/logo1.png';
 class Profile extends Component {
 	// Data
 	state = {
+		user: [],
 		email: '',
 		password: '',
 		github: '',
@@ -72,10 +74,26 @@ class Profile extends Component {
 			}
 	}
 )}
-
+getUser = () => {
+	axios.get('http://localhost:2200/api/profile', {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then((res) => {
+            console.log('RES_DATA', res.data)
+            this.setState({
+                user: res.data,
+                // value: res.data[2].name
+            })
+            console.log(this.state)
+        }).catch((err) => {
+            console.log('Error', err)
+        })
+}
 
 	componentWillMount() {
 		this.getUserData()
+		this.getUser()
 	}
 
 
@@ -107,7 +125,7 @@ class Profile extends Component {
 							<img src={logo} alt="..." className="img-logo"/>
 						</div>
 						<div className="imageWrapper">
-							<img src={profile} alt="..." className="img-profile rounded-circle"/>
+							<img src={this.state.user.file} alt="..." className="img-profile rounded-circle"/>
 						</div>
 						<button id="profilepicbutton" className="button btn btn rounded-pill mt-5" type="submit">Edit profile picture</button>
 					</div>
@@ -124,9 +142,12 @@ class Profile extends Component {
 						{/*  SOCIALS Component */}
 			      <div id="userinformation" className="p-4">
 							<div className="username p-2 mt-2">
-								<p>first name:</p>
-								<p>last name:</p>
-								<p>batch:</p>
+								<p>{this.state.user.name}</p>
+								<p>{this.state.user.email}</p>
+								<p>Batch: {this.state.user.batch}</p>
+							</div>
+							<div className="logout">
+							<Logout/>
 							</div>
 							{/*  SOCIAL */}
 								<form onSubmit={(e) => this.update(e)}>

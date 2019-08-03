@@ -32,10 +32,13 @@ class Routes extends Component {
 					<Route path="/login" component={() => <Login auth={this.auth} />} />
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
 					<Route path='/create' component={() => <Create auth={this.auth} />} />
-					<Route path='/profile' component={() => <Profile auth={this.auth} />} />
+					<Route path="/profile" render={() => (
+									this.checkAuth() ? (<Profile />) : (<Redirect to="/login" />)
+								)} />
 					<Route path="/" render={() => (
 							this.checkAuth() ? (<App />) : (<Redirect to="/login" />)
 						)} />
+
 				</Switch>
 			</BrowserRouter>
 		)

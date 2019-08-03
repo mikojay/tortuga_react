@@ -18,6 +18,9 @@ html, body {
 	#usrImageDisplay {
 		margin-top: 20px;
 	}
+	.logout{
+		text-align: right;
+	}
 	.box{
 	text-align: center;
 	}

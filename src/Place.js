@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import food from './images/food.jpg';
+// import food from './images/food.jpg';
 import moment from 'moment';
 export default class Place extends Component {
     //data
