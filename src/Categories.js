@@ -60,8 +60,9 @@ getUserData = () => {
  						<div className="imageWrapper col ml-4">
  							<img src={this.state.user.file} alt="..." className="img-lilprofile rounded-circle"/>
  						</div>
- 						<div className="usernameapp col mr-4">
+ 						<div className="usernameapp col text-right mr-4">
  							<p>{this.state.user.name}</p>
+							<p>Batch: {this.state.user.batch}</p>
  							<p>{this.state.user.email}</p>
  						</div>
          </div>

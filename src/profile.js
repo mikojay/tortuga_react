@@ -146,9 +146,6 @@ getUser = () => {
 								<p>{this.state.user.email}</p>
 								<p>Batch: {this.state.user.batch}</p>
 							</div>
-							<div className="logout">
-							<Logout/>
-							</div>
 							{/*  SOCIAL */}
 								<form onSubmit={(e) => this.update(e)}>
 									<div className="title mt-5">

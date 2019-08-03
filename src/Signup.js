@@ -106,7 +106,7 @@ export default class Signup extends Component {
 									onChange={(e) => this.handleChange(e)}
 									type="text" className="form-control"
 									placeholder="Enter your batch number" required/>
-                <div className="form-group">
+								<div className="form-group mt-3">
                   <input type="file" onChange={(e) => this.addFile(e)}/>
                 </div>
 
