@@ -67,7 +67,7 @@ export default class Create extends Component {
         //     category: this.state.category,
         //     file:this.state.file
         // }
-        axios.post(`${process.env.REACT_APP_API}api/places`, file_holder,
+        axios.post(`${process.env.REACT_APP_API}/api/places`, file_holder,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
