@@ -3,6 +3,8 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/profile.css'
 import Logout from './Logout'
+import { Link } from 'react-router-dom'
+
 // import profile from './images/profile.jpg';
 import logo from './images/logo1.png';
 class Profile extends Component {
@@ -145,6 +147,7 @@ getUser = () => {
 								<p>{this.state.user.name}</p>
 								<p>{this.state.user.email}</p>
 								<p>Batch: {this.state.user.batch}</p>
+
 							</div>
 							{/*  SOCIAL */}
 								<form onSubmit={(e) => this.update(e)}>
@@ -201,7 +204,10 @@ getUser = () => {
 												<i className="fab fa-instagram"></i>
 											</label>
 											<input type="text" className="form-control" placeholder="Instagram" value={this.state.instagram} onChange={(e) => this.changeInstagram(e)}/>
-											<button id="socialbutton" className="button btn btn rounded-pill" type="submit">Edit Socials</button>
+												{/*   // <Link to='/' >*/}
+ 												 <button id="socialbutton" className="button btn btn rounded-pill" type="submit">Edit Socials</button>
+ 											 {/*</Link>*/}
+
 										</div>
 									</div>
 							 {/*  Socials END */}

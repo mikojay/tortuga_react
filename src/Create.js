@@ -144,9 +144,9 @@ export default class Create extends Component {
 
 
     render() {
-        // if(this.state.toMain === true){
-        //     return <Redirect to='/'/>
-        // }
+        if(this.state.toMain === true){
+            return <Redirect to='/'/>
+        }
 
         return (
             <div>

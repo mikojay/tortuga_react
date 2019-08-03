@@ -66,9 +66,12 @@ getUserData = () => {
  							<p>{this.state.user.email}</p>
  						</div>
          </div>
-				 <div className="p-2 ml-2 mt-2">
+				 <div className="p-2 ml-2 mt-2 d-flex justify-content-around">
 					 <Link to='/profile' >
 						 <button className="btn btn-outline-dark">profile</button>
+					 </Link>
+					 <Link to='/create' >
+						 <button className="btn btn-outline-dark">create place</button>
 					 </Link>
 
 				 </div>

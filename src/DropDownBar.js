@@ -14,7 +14,6 @@ export default class Bar extends Component {
       <option value='-date' >Date</option>
       <option value='-likes' >Likes</option>
       <option value='-dislikes' >Dislikes</option>
-			<option value='Top Five' >Top Five</option>
     </select>
 		<Logout/>
   </div>

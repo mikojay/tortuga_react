@@ -18,23 +18,8 @@ export default class Places extends Component {
 
   componentWillMount(){
 		this.props.getPlaces()
-		// this.props.getPlaces()
-    // axios.get('http://localhost:2200/api/places').then((res)=>{
-    //   //console.log(res)
-    //   this.setState({
-    //     places:res.data
-    //   })
-    // }).catch((err)=>{
-    //   console.log('Error Axios Get ',err)
-    // })
-  }
-//   handleChange = (e)=>{
-//     this.setState({
-//         sort:e.target.value
-//     })
-//     console.log(e.target.value)
-// }
-// ========
+}
+
 handleChange = (e)=>{
   this.setState({
     sort:e.target.value
@@ -42,9 +27,6 @@ handleChange = (e)=>{
 this.props.getPlaces(null, e.target.value)
 
 }
-
-
-// =======
   render() {
     return (
 
