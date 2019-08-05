@@ -9,13 +9,6 @@ class Category extends Component {
 	componentWillMount() {
 		console.log(this.props)
 	}
-	// getClass = () => {
-	// 	let cl = "badge badge-dark ";
-	// 	if (this.state.category === 'active') {
-	// 		cl += 'active'
-	// 	}
-	// 	return cl
-	// }
 
 	// Render
 	render() {

@@ -12,10 +12,11 @@
 	}
 	.badge{
 		cursor: pointer;
+
 	}
-	.badge:hover{
-		background-color: #41CAEB!important;
-    }
+	/* .badge:hover{
+		background-color: #12cfdc!important;
+    } */
     .img-thumbnail{
 		width: 50px!important;
 	}
@@ -34,7 +35,7 @@
 
 	#main-containerCreate {
 		height: 100vh;
-		background-color: rgb(163, 222, 240);
+		background-color: #333333;
 
 	}
 	#user{

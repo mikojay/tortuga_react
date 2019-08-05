@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom'
+import logo from './images/logo.png';
 // import profile from './images/profile.jpg'
 import Category from './Category'
 import axios from 'axios'
@@ -56,16 +57,10 @@ getUserData = () => {
 	render() {
 		return (
 			<div>
-				<div className='row'>
-					<div className='col w-100 bg-warning'>
-						<img style={{width:'300px',height:'300px'}} src={this.state.user.file}  alt="..." className="" />
 
-					</div>
-				</div>
-				<div className="row p-2 ">
-
+				<div className="row p-2 mt-3 ">
  						<div className=" col ">
-							<img style={{width:'100px',height:'100px'}} src={this.state.user.file}  alt="..." className="" />
+							<img  src={this.state.user.file}  alt="..." className="profile-image" />
  						</div>
  						<div className="usernameapp col text-right mr-4">
  							<p>{this.state.user.name}</p>
@@ -75,10 +70,10 @@ getUserData = () => {
          </div>
 				 <div className="p-2 ml-2 mt-2 d-flex justify-content-around">
 					 <Link to='/profile' >
-						 <button className="btn btn-outline-dark">profile</button>
+						 <button className="button_profile btn btn-outline-dark">profile</button>
 					 </Link>
 					 <Link to='/create' >
-						 <button className="btn btn-outline-dark">create place</button>
+						 <button className="button_create btn btn-outline-dark">create place</button>
 					 </Link>
 
 				 </div>
@@ -91,7 +86,7 @@ getUserData = () => {
 						})
 					}
 				</div>
-
+				<img id='logo' src={logo} alt="Toptuga logo" className="img-logo-main mt-4"></img>
 			 </div>
 		 </div>
 		)

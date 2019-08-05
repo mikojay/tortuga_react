@@ -147,7 +147,7 @@ export default class Create extends Component {
                 <div id="main-containerCreate" className=" container-fluid d-flex flex-column justify-content-center align-items-center">
 									<div className='text-right w-100'>
 									<Link to='/'>
-			 						 <button className="btn btn-outline-dark mr-5">places</button>
+			 						 <button className="button_places btn btn-outline-dark mr-5">places</button>
 			 					 </Link>
 								 </div>
                     <div className="card pt-0">

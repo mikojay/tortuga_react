@@ -10,7 +10,7 @@ export default class Bar extends Component {
       <div>
       <form action="">
 		  <div className="toprow p-2 m-3">
-    <select   onChange={this.props.handleChange} className="filterbutton btn-lg mr-3" id="selectPlaceCategory">
+    <select   onChange={this.props.handleChange} className="filterbutton btn btn-outline-info mr-5" id="selectPlaceCategory">
       <option value='-date' >Date</option>
       <option value='-likes' >Likes</option>
       <option value='-dislikes' >Dislikes</option>

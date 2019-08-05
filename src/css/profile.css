@@ -8,9 +8,8 @@ html, body {
 }
 
 	#rightCol {
-	background: #12cfdc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #12cfdc, #6400ed, #333333); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #12cfdc, #6400ed, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #333333; /* fallback for old browsers */
+
 }
 	#leftCol{
 		background: rgb(237, 237, 237);
@@ -28,6 +27,7 @@ html, body {
 		width: 180px;
 	}
 	.img-profile {
+		margin-top: 150px;
 		width: 210px;
 		height: 210px;
 
@@ -37,15 +37,19 @@ html, body {
 		font-size: 17px;
 	}
 
-	#profilepicbutton {
+	/* #profilepicbutton {
 		background-color: #6400ed;
 		color: rgb(237, 237, 237);
-	}
+	} */
 	#socialbutton {
 		margin-left: 300px;
 		margin-top: 60px;
 		color: #6400ed;
 		background-color: rgb(237, 237, 237);
+	}
+	#socialbutton:hover {
+		color: rgb(237, 237, 237);
+		background-color: #6400ed;
 	}
 
 	.button {
@@ -53,6 +57,17 @@ html, body {
 -moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
 box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
 	}
+	.button_places:hover {
+		background-color: #12cfdc;
+		color: rgb(237, 237, 237);
+	}
+	.button_places {
+		border-color: #12cfdc;
+		color: #12cfdc;
+-webkit-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+-moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+}
 
 	#userinformation {
 		font-size: 18px;

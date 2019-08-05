@@ -141,7 +141,6 @@ getUser = () => {
 						<div className="imageWrapper">
 							<img src={this.state.user.file} alt="..." className="img-profile rounded-circle"/>
 						</div>
-						<button id="profilepicbutton" className="button btn btn rounded-pill mt-5" type="submit">Edit profile picture</button>
 					</div>
 				</div>
 							{/*  ProfilPic END */}
@@ -154,7 +153,7 @@ getUser = () => {
 			    <div id="rightCol" className="col-9 p-0 ">
 						<div className='float-right p-5'>
 							<Link to='/' >
-	 						 <button className="btn btn-outline-dark mr-5">places</button>
+	 						 <button className="button_places btn btn-outline-info mr-5">places</button>
 	 					 </Link>
 							<Logout/>
 						</div>

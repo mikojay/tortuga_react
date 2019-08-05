@@ -37,7 +37,7 @@ class App extends Component {
 	      })
 			})
 		} else {
-		
+
 	}
 }
     // }).catch((err)=>{
@@ -55,7 +55,7 @@ class App extends Component {
 			            {/* LEFT COLUMN */}
 			          <div id="leftCol" className="col-3 p-0 ">
 			            <Categories getPlaces={this.getPlaces}/>
-									<img id='logo' src={logo} alt="Toptuga logo" className="img-logo"></img>
+									
 			             </div>
 			              {/* RIGHT COLUMN */}
 			             <div id="rightCol" className="col-9 p-0 ">
