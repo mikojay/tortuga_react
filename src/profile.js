@@ -152,7 +152,12 @@ getUser = () => {
 
 					{/*  START SOCIALS */}
 			    <div id="rightCol" className="col-9 p-0 ">
-
+						<div className='float-right p-5'>
+							<Link to='/' >
+	 						 <button className="btn btn-outline-dark mr-5">places</button>
+	 					 </Link>
+							<Logout/>
+						</div>
 						{/*  SOCIALS Component */}
 			      <div id="userinformation" className="p-4">
 							<div className="username p-2 mt-2">

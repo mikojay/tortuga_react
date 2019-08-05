@@ -3,8 +3,7 @@ import './css/Create.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios';
 import logo from './images/logo.png'
- import { Redirect } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 
 export default class Create extends Component {
     state = {
@@ -146,6 +145,11 @@ export default class Create extends Component {
         return (
             <div>
                 <div id="main-containerCreate" className=" container-fluid d-flex flex-column justify-content-center align-items-center">
+									<div className='text-right w-100'>
+									<Link to='/'>
+			 						 <button className="btn btn-outline-dark mr-5">places</button>
+			 					 </Link>
+								 </div>
                     <div className="card pt-0">
                     <img className='w-50 m-auto' src={logo} alt="logo" />
                         <div className="card-body mt-0 pt-0">
