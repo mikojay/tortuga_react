@@ -27,7 +27,11 @@ export default class Create extends Component {
             this.setState({
                 categories: res.data,
                 value: res.data[2].name
-            })
+            }, () => {
+						this.setState({
+							category: res.data[0]._id
+						})
+						})
             console.log(this.state)
         }).catch((err) => {
             console.log('Error', err)
@@ -55,7 +59,7 @@ export default class Create extends Component {
         file_holder.append('description', this.state.description)
         file_holder.append('category', this.state.category)
         console.log('file_holder', file_holder)
-
+				console.log('testCAT', this.state.category);
         //------------------
         // let place = {
         //     name: this.state.name,
@@ -73,6 +77,7 @@ export default class Create extends Component {
                 }
             }
         ).then((res) => {
+					setTimeout(6000);
           window.location = '/'
         }).catch((err) => {
             console.log('error>>>>>>', err)
