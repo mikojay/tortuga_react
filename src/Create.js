@@ -77,7 +77,6 @@ export default class Create extends Component {
                 }
             }
         ).then((res) => {
-					setTimeout(6000);
           window.location = '/'
         }).catch((err) => {
             console.log('error>>>>>>', err)

@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/profile.css'
 import Logout from './Logout'
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router-dom'
 
 
 // import profile from './images/profile.jpg';
@@ -21,7 +20,7 @@ class Profile extends Component {
 		facebook: '',
 		instagram: '',
 		error: '',
-		toMain:false
+		// toMain:false
 	}
 	// Functions
 	handleChange =(e)=>{
@@ -91,22 +90,19 @@ getUser = () => {
 		this.getUser()
 	}
 
-
+//if (this.state.faceb)
 
 
 	update = (e) => {
 		let updatedUser = {
-			email: this.state.email,
-			password: this.state.password,
-			github: this.state.github,
-			whatsapp: this.state.whatsapp,
-			linkedin: this.state.linkedin,
-			facebook: this.state.facebook,
-			instagram: this.state.instgram,
+			email: this.state.email === '' ? this.state.user.email : this.state.email,
+			password: this.state.password === '' ? this.state.user.password : this.state.password,
+			github: this.state.github === '' ? this.state.user.github : this.state.github,
+			whatsapp: this.state.whatsapp === '' ? this.state.user.whatsapp : this.state.whatsapp,
+			linkedin: this.state.linkedin === '' ? this.state.user.linkedin : this.state.linkedin,
+			facebook: this.state.facebook === '' ? this.state.user.facebook : this.state.facebook,
+			instagram: this.state.instgram === '' ? this.state.user.instagram : this.state.instagram,
 			}
-			this.setState({
-				toMain: true
-			})
 
 		e.preventDefault()
 		axios.patch(`${process.env.REACT_APP_API}/api/profile`, updatedUser, {headers: {
@@ -114,6 +110,7 @@ getUser = () => {
 			}}).then((res) => {
 				localStorage.setItem('token', res.data.token)
 				this.getUserData()
+				window.location = '/'
 		}).catch((err) => {
 			console.log('err', err)
 		})
@@ -123,9 +120,7 @@ getUser = () => {
 
 	// Render
 	render() {
-		if(this.state.toMain === true){
-				return <Redirect to='/'/>
-		}
+
 		return (
 			<div className="container-fluid">
   <div className="row">

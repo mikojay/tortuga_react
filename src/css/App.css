@@ -10,6 +10,10 @@ html, body {
 .toprow{
 	text-align: right;
 }
+.container_top {
+	display: grid;
+	grid-template-columns: auto auto;
+}
 .filterbutton:hover {
 	background-color: #12cfdc;
 	color: rgb(237, 237, 237);
@@ -32,6 +36,7 @@ html, body {
 	/* border: solid 1px black;
 	border-radius: 5px; */
 }
+
 	#category > p {
   position: relative;
   color: #000;
@@ -81,7 +86,7 @@ html, body {
 .usernameapp p {
 	font-size: 18px;
 	color: #333333;
-
+	overflow-wrap: break-word;
 }
 /* .img-lilprofile{
 	width: 55px;
@@ -99,10 +104,12 @@ html, body {
 			/* margin-top: 90px; */
 			margin-left: 30px;
 	}
-
-	.card{
-		width: 29rem;
+	.card-body-place{
+		height: 12rem;
 		background: rgb(237, 237, 237);
+	}
+	.card{
+
 	}
 .profile-image{
 	width: 130px;

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/App.css'
 import axios from 'axios'
-import logo from './images/logo.png';
+// import logo from './images/logo.png';
 import Categories from './Categories'
 import Places from './Places'
 
@@ -55,7 +55,7 @@ class App extends Component {
 			            {/* LEFT COLUMN */}
 			          <div id="leftCol" className="col-3 p-0 ">
 			            <Categories getPlaces={this.getPlaces}/>
-									
+
 			             </div>
 			              {/* RIGHT COLUMN */}
 			             <div id="rightCol" className="col-9 p-0 ">

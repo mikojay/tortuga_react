@@ -58,11 +58,11 @@ getUserData = () => {
 		return (
 			<div>
 
-				<div className="row p-2 mt-3 ">
- 						<div className=" col ">
-							<img  src={this.state.user.file}  alt="..." className="profile-image" />
- 						</div>
- 						<div className="usernameapp col text-right mr-4">
+				<div className="container_top row bg-danger">
+					<div className='col bg-info'>
+						<img  src={this.state.user.file}  alt="..." className="profile-image" />
+					</div>
+ 						<div className="usernameapp col bg-warning">
  							<p>{this.state.user.name}</p>
 							<p>Batch: {this.state.user.batch}</p>
  							<p>{this.state.user.email}</p>
