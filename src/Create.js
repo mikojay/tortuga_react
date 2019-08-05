@@ -74,10 +74,7 @@ export default class Create extends Component {
                 }
             }
         ).then((res) => {
-            let places = this.state.places
-            places.push(res.data)
-            console.log('new place',res.data)
-            this.setState({ places })
+          window.location = '/'
         }).catch((err) => {
             console.log('error>>>>>>', err)
         })
@@ -144,9 +141,7 @@ export default class Create extends Component {
 
 
     render() {
-        if(this.state.toMain === true){
-            return <Redirect to='/'/>
-        }
+
 
         return (
             <div>
