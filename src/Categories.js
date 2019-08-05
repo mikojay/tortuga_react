@@ -56,9 +56,9 @@ getUserData = () => {
 	render() {
 		return (
 			<div>
-				<div id="usrImageDisplay" className="row p-2">
- 						<div className="imageWrapper col ml-4">
- 							<img src={this.state.user.file} alt="..." className="img-thumbnail"/>
+				<div className="row p-2 ">
+ 						<div className=" col ">
+							<img src={this.state.user.file}  alt="..." className="img-thumbnail" />
  						</div>
  						<div className="usernameapp col text-right mr-4">
  							<p>{this.state.user.name}</p>

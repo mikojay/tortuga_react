@@ -15,9 +15,9 @@ html, body {
 	#leftCol{
 		background: rgb(237, 237, 237);
 	}
-	#usrImageDisplay {
+	/* #usrImageDisplay {
 		margin-top: 20px;
-	}
+	} */
 	.logout{
 		text-align: right;
 	}
