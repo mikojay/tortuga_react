@@ -124,7 +124,7 @@ getUser = () => {
 		return (
 			<div className="container-fluid">
   <div className="row">
-    <div id="leftCol" className="col-3 p-0">
+    <div id="leftCol" className="col p-0">
 			{/*  Start left col END */}
 
       <div className="wrapProfile p-2">

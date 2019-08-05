@@ -58,17 +58,17 @@ getUserData = () => {
 		return (
 			<div>
 
-				<div className="container_top row bg-danger">
-					<div className='col bg-info'>
+				<div className="container_top row mt-4">
+					<div className='col'>
 						<img  src={this.state.user.file}  alt="..." className="profile-image" />
 					</div>
- 						<div className="usernameapp col bg-warning">
+ 						<div className="usernameapp col">
  							<p>{this.state.user.name}</p>
 							<p>Batch: {this.state.user.batch}</p>
  							<p>{this.state.user.email}</p>
  						</div>
          </div>
-				 <div className="p-2 ml-2 mt-2 d-flex justify-content-around">
+				 <div className="buttons_main p-2 ml-2 d-flex justify-content-around">
 					 <Link to='/profile' >
 						 <button className="button_profile btn btn-outline-dark">profile</button>
 					 </Link>
@@ -86,7 +86,7 @@ getUserData = () => {
 						})
 					}
 				</div>
-				<img id='logo' src={logo} alt="Toptuga logo" className="img-logo-main mt-4"></img>
+				<img id='logo' src={logo} alt="Toptuga logo" className="img-logo-main"></img>
 			 </div>
 		 </div>
 		)

@@ -6,7 +6,12 @@ html, body {
 #leftCol, #rightCol {
     height: 100vh;
 }
-
+#leftCol{
+	width: 300px;
+}
+#rightCol{
+	width: calc(100vw - 300px);
+}
 .toprow{
 	text-align: right;
 }
@@ -33,6 +38,8 @@ html, body {
 	overflow-y: scroll;
 	display: inline-grid;
 	grid-template-columns: 1fr 1fr;
+	margin-left: 50px;
+	margin-right: 50px;
 	/* border: solid 1px black;
 	border-radius: 5px; */
 }
@@ -51,7 +58,7 @@ html, body {
 #category > p:before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 70%;
   height: 2px;
   bottom: 0;
   left: 0;
@@ -80,7 +87,7 @@ html, body {
 	border-radius: 4px;
 }  */
 	#category {
-		margin-top: 60px;
+		margin-top: 40px;
 	}
 
 .usernameapp p {
@@ -112,10 +119,12 @@ html, body {
 
 	}
 .profile-image{
-	width: 130px;
-	height: 130px;
+	width: 120px;
+	height: 120px;
 	padding: 5px;
 	border-radius: 100%;
+	margin-left: 20px;
+	margin-bottom: 2px;
 }
 .button_profile:hover {
 	background-color: #333333;
@@ -136,4 +145,7 @@ html, body {
 	-webkit-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
 	-moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
 	box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.6);
+}
+.buttons_main {
+	margin-top: 60px;
 }
