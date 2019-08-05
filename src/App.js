@@ -53,14 +53,13 @@ class App extends Component {
 			        <div className="container-fluid">
 			          <div className="row">
 			            {/* LEFT COLUMN */}
-			          <div id="leftCol" className="col p-0">
-			            <Categories getPlaces={this.getPlaces}/>
-
-			             </div>
-			              {/* RIGHT COLUMN */}
-			             <div id="rightCol" className="col p-0">
+			          	<div id="leftCol">
+			            	<Categories getPlaces={this.getPlaces}/>
+			          	</div>
+			            {/* RIGHT COLUMN */}
+			            <div id="rightCol">
 			              <Places places={this.state.places} getPlaces={this.getPlaces}/>
-			             </div>
+			            </div>
 			          </div>
 			        </div>
 			      </div>

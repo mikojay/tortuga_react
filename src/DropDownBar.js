@@ -7,7 +7,7 @@ export default class Bar extends Component {
   render() {
 
     return (
-      <div>
+      <div id="dropdownbar">
       <form action="">
 		  <div className="toprow p-2 m-3">
     <select   onChange={this.props.handleChange} className="filterbutton btn btn-outline-info mr-5" id="selectPlaceCategory">

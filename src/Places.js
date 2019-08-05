@@ -36,7 +36,7 @@ this.props.getPlaces(null, e.target.value)
           <DropDownBar handleChange={this.handleChange} />
 
 
-          <div id="cardWrap" className=" pl-4 mt-3">
+          <div id="cardWrap">
            {/* PLACE */}
            {
               this.state.places.map((p)=>{

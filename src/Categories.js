@@ -58,10 +58,8 @@ getUserData = () => {
 		return (
 			<div>
 
-				<div className="container_top row mt-4">
-					<div className='col'>
-						<img  src={this.state.user.file}  alt="..." className="profile-image" />
-					</div>
+				<div className="profile">
+					<img src={this.state.user.file}  alt="..." className="profile-image" />
  						<div className="usernameapp col">
  							<p>{this.state.user.name}</p>
 							<p>Batch: {this.state.user.batch}</p>
@@ -70,10 +68,10 @@ getUserData = () => {
          </div>
 				 <div className="buttons_main p-2 ml-2 d-flex justify-content-around">
 					 <Link to='/profile' >
-						 <button className="button_profile btn btn-outline-dark">profile</button>
+						 <button className="button_profile btn btn-outline-dark">Profile</button>
 					 </Link>
 					 <Link to='/create' >
-						 <button className="button_create btn btn-outline-dark">create place</button>
+						 <button className="button_create btn btn-outline-dark">Create Place</button>
 					 </Link>
 
 				 </div>

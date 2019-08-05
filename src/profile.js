@@ -133,9 +133,8 @@ getUser = () => {
 						<div className="logoWrapper">
 							<img src={logo} alt="..." className="img-logo"/>
 						</div>
-						<div className="imageWrapper">
-							<img src={this.state.user.file} alt="..." className="img-profile rounded-circle"/>
-						</div>
+						<img src={this.state.user.file} alt="..." className="rounded-circle"/>
+						
 					</div>
 				</div>
 							{/*  ProfilPic END */}

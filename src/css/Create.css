@@ -1,9 +1,7 @@
 #leftCol, #rightCol {
     height: 100vh;
 }
-#rightCol {
-    background: #5e72e4;
-}
+
  /* #cardWrap{
 		height: 500px;
 		overflow-y: scroll;
@@ -29,9 +27,7 @@
 	#rightNav{
 		background-color: white;
 	}
-	.card{
-		width: 26rem;
-	}
+
 
 	#main-containerCreate {
 		height: 100vh;
