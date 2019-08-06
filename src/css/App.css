@@ -136,7 +136,7 @@ html, body {
 		margin-right: 14px;
 	}
 	select.filterbutton {
-		background: white;
+		background: rgb(237, 237, 237);
 	}
 	.imageWrapper img {
 		max-width: 100%;
@@ -148,12 +148,10 @@ html, body {
 	}
 	.card-body-place{
 		height: 12rem;
-		background: white;
+		background: rgb(237, 237, 237);
 		padding: 10px;
 	}
-	.card{
 
-	}
 .profile-image{
 	width: 120px;
 	height: 120px;
@@ -164,7 +162,7 @@ html, body {
 }
 .button_profile:hover {
 	background-color: #333333;
-	color: white;
+	color: rgb(237, 237, 237);
 }
 .button_profile {
 	border-color: #333333;
@@ -174,7 +172,7 @@ html, body {
 }
 .button_create:hover {
 	background-color: #6400ed;
-	color: white;
+	color: rgb(237, 237, 237);
 }
 .button_create {
 	border-color: #333333;

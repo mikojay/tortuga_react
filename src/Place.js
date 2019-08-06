@@ -22,8 +22,20 @@ export default class Place extends Component {
                 <div className="imageWrapper "> <img src={this.state.place.file} alt="..."></img> </div>
 
 
-                    <div className="card-content"> <span><b>{this.state.place.name} </b></span>
-                     <span><b><i className="far fa-address-book"></i> </b>{this.state.place.address} </span>
+                    <div className="card-content">
+											<span>
+												<b>
+													{this.state.place.name}
+												</b>
+											</span>
+											<div>
+                     <span>
+											 <b>
+												 <i className="far fa-address-book"></i>
+											 </b>
+											 {this.state.place.address}
+										 </span>
+										 </div>
                       <div>
                         <span><b><i className="far fa-thumbs-up"></i> </b>{this.state.place.likes} </span>
                         <span><b> <i className="far fa-thumbs-down"></i> </b>{this.state.place.dislikes} </span>
